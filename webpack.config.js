@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
+const { EnvironmentPlugin } = require('webpack');
 
 const dist_path = resolve(__dirname, './dist');
 const src_path = resolve(__dirname, './src');
@@ -21,13 +22,19 @@ const config = {
             }
         ]
     },
-    plugins: [new webpack.ProvidePlugin({
-        $: 'jquery',
-        JQuery: 'jquery',
-        jQuery: 'jquery',
-        Backbone: 'backbone',
-        _: 'underscore'
-    })],
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            JQuery: 'jquery',
+            jQuery: 'jquery',
+            Backbone: 'backbone',
+            _: 'underscore'
+        }),
+        new EnvironmentPlugin({
+            WEATHER_API: 'http://api.openweathermap.org/data/2.5/onecall',
+            WEATHER_API_KEY: 'b3f1fe3d2ff2d408560109a61612d016'
+        })
+    ],
     devServer: {
         static: {
             directory: dist_path,

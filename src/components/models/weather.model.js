@@ -51,7 +51,7 @@ const weather_collection = Backbone.Collection.extend({
             })
             queryParam = queryParam.substring(0, queryParam.length - 1)
         }
-        return 'http://api.openweathermap.org/data/2.5/onecall?' + queryParam;
+        return `${process.env.WEATHER_API}?` + queryParam;
         // api.openweathermap.org/data/2.5/forecast/daily?lat=35&lon=139&cnt=10&appid={API key}
     },
     parse: function (response) {

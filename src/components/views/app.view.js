@@ -43,7 +43,7 @@ export default Backbone.View.extend({
             exclude: 'hourly,alerts,current,minutely',
             units: 'metric',
             lang: 'en',
-            appid: 'b3f1fe3d2ff2d408560109a61612d016',
+            appid: process.env.WEATHER_API_KEY,
         });
         self.weatherCol.fetch({
             success: function (data) {

@@ -1,0 +1,126 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto,
+        "Helvetica Neue",
+        sans-serif;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+.row {
+    margin: 0;
+}
+
+.row:before {
+    display: block;
+}
+
+.container-fluid,
+.container {
+    padding: 0;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.icon-font-size {
+    font-size: 16px;
+}
+
+
+.web-app {
+    position: relative;
+}
+
+.web-app .bg-primary {
+    background-color: hsla(191, 98%, 72%, 1) !important;
+}
+
+.web-app .navbar-brand {
+    padding: 0px 3rem;
+}
+
+.navbar {
+    margin-bottom: 0.5rem;
+    margin-top: 0.6rem;
+}
+
+.web-app-header {
+    height: 6.4rem;
+}
+
+.web-app-content {
+    justify-content: center;
+    overflow-x: auto;
+    min-height: calc(100vh - 9rem);
+}
+
+.web-app-footer {
+    height: 2rem;
+    text-align: center;
+}
+
+.web-app-footer p {
+    margin: 0;
+}
+
+.text-aligh-center {
+    text-align: center;
+}
+
+.align-btn-center {
+    margin: 0 auto;
+    width: 25%;
+}
+
+.align-vertical-center {
+    margin-top: 5rem;
+}
+
+.map-container {
+    min-height: 10rem;
+}
+
+.currency-container tbody tr {
+    padding-top: 10px;
+}
+
+.circle-border {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.weather-details .row {
+    margin-top: 2rem;
+}

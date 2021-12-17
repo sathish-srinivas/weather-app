@@ -14,12 +14,17 @@ const config = {
         rules: [
             {
                 test: /\.(js)$/, loader: 'babel-loader', exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
     plugins: [new webpack.ProvidePlugin({
         $: 'jquery',
         JQuery: 'jquery',
+        jQuery: 'jquery',
         Backbone: 'backbone',
         _: 'underscore'
     })],
@@ -29,7 +34,7 @@ const config = {
             serveIndex: true,
             watch: true
         },
-        host: "127.0.0.1",
+        // host: "127.0.0.1",
         historyApiFallback: {
             disableDotRule: true,
         },

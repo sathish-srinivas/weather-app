@@ -22,6 +22,7 @@
   "homepage": "https://github.com/sathish-srinivas/weather-app#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@googlemaps/js-api-loader": "^1.12.11",
     "backbone": "^1.4.0",
     "bootstrap": "^3.4.1",
     "jquery": "^3.6.0",

@@ -1,4 +1,4 @@
-import HomeView from './components/views/home.view.js';
+import HomeView from './components/views/app.view.js';
 
 const router_mapper = {
     routes: {

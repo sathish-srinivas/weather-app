@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div class="container-fluid web-app">
+    <div class="container-fluid web-app" id="root">
         <div class="row bg-primary web-app-header">
             <div class="col-md-12">
                 <nav class="navbar navbar-light">
@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="row width-100">
-                                    <div class="col-md-12 map-container">Map</div>
+                                    <div class="col-md-12 map-container" id="map-container-id">Map</div>
                                     <div class="col-md-12 currency-container">
                                         <div class="row ">
                                             <table class="col-md-12 ">
@@ -117,8 +117,16 @@
     </div>
 
 
-    <script id="home-template" type="text/html">
-        <h1>Hello!!1</h1>
+    <script id="weather-template" type="text/html">
+        <div class="row ">
+            <div class="col-md-3 dayDate"> <%= date %> </div>
+            <div class="col-md-3 degCelcius"> <%= temp.min %> / <%= temp.max %>
+                <span><sup><span class="circle-border"></span></sup> C</span>
+            </div>
+            <div class="col-md-3 rainInfo"><%= weather.description %></div>
+            <div class="col-md-3 actionBtn"><i class="fas fa-sort-down icon-font-size"></i></i>
+            </div>
+        </div>
     </script>
 
     <script src="bundle.js" async></script>

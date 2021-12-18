@@ -33,10 +33,10 @@ const config = {
         new EnvironmentPlugin({
             WEATHER_API: 'http://api.openweathermap.org/data/2.5/onecall',
             GEO_CODING_API: 'http://api.openweathermap.org/geo/1.0/reverse',
-            WEATHER_API_KEY: 'b3f1fe3d2ff2d408560109a61612d016',
+            WEATHER_API_KEY: '',
             CURRENCY_API: 'https://v2.api.forex/rates/latest.json',
-            CURRENCY_API_KEY: '28782ec3-274f-41d4-835d-c0472f6cd380',
-            GOOGLE_API_KEY: 'AIzaSyCHMRIYub8KHNq29VAfKlK5QohlkQdsZXM',
+            CURRENCY_API_KEY: '',
+            GOOGLE_API_KEY: '',
         })
     ],
     devServer: {

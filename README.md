@@ -16,9 +16,9 @@ npm start
 
 ```
 ###### Configurations:
-[^1] Once the installation before running the code kindly provide necessary values for the environment values
-[^2] Navigate to the root folder
-[^3] Open the file webpack.config.js, update the necessary url & its keys
+1. Once the installation before running the code kindly provide necessary values for the environment values
+2. Navigate to the root folder
+3. Open the file webpack.config.js, update the necessary url & its keys
     - WEATHER_API
     - GEO_CODING_API
     - WEATHER_API_KEY

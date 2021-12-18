@@ -1,10 +1,10 @@
 import _ from 'underscore';
-import weatherData from '../models/weather.model.js'
+import currencyData from '../models/currency.model.js'
 
-const weather_view = Backbone.View.extend({
-    model: new weatherData.weathermodel(),
+const currency_view = Backbone.View.extend({
+    model: new currencyData.currencyModel(),
 
-    template: _.template($('#weather-template').html()),
+    template: _.template($('#currency-template').html()),
 
     initialize: function () {
         const self = this;
@@ -18,10 +18,10 @@ const weather_view = Backbone.View.extend({
     }
 });
 
-const weathers_view = Backbone.View.extend({
-    model: new weatherData.weathermodel(),
+const currencys_view = Backbone.View.extend({
+    model: new currencyData.currencymodel(),
 
-    el: $('.weather-details'),
+    el: $('.currency-details'),
 
     initialize: function () {
         const self = this;
@@ -33,9 +33,7 @@ const weathers_view = Backbone.View.extend({
         self.$el.html('');
         if (self.model && self.model.toArray()) {
             _.each(self.model.toArray(), (eachData) => {
-                if (eachData.get('date') != new Date().toDateString()) {
-                    self.$el.append(new weather_view({ model: eachData }).render().$el);
-                }
+                self.$el.append(new currency_view({ model: eachData }).render().$el);
             });
         } else {
             self.$el.html('No Data Available');
@@ -44,4 +42,4 @@ const weathers_view = Backbone.View.extend({
     }
 });
 
-export default { weatherView: weather_view, weatherCollectionView: weathers_view };
+export default { currencyView: currency_view, currencyCollectionView: currencys_view };

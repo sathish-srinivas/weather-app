@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <div class="container-fluid web-app" id="root">
+        <div class="row bg-primary web-app-header">
+            <div class="col-md-12">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            Weather
+                            <img src="./img/weather.png" alt="" width="50" height="50"
+                                class="d-inline-block align-text-top">
+
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row web-app-content">
+            <div class="align-vertical-center">
+                <div class="col-md-12 ">
+                    <div class="container width-90">
+                        <div class="row width-100">
+                            <div class="col-md-6">
+                                <div class="row width-100">
+                                    <div class="col-md-12">
+                                        <div class="row text-aligh-center">
+                                            <div class="col-md-12">
+                                                <span id="curr_date">3:04pm, Dec 1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row text-aligh-center">
+                                            <div class="col-md-12">
+                                                <h1 id="curr_location">London, GB</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row text-aligh-center">
+                                            <div class="col-md-12">
+                                                <h3><span id="curr_degree">8</span> <span><sup><span
+                                                                class="circle-border"></span></sup> C</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row ">
+                                            <div class="col-md-12">
+                                                <div class="align-btn-center">
+                                                    <button type="button" class="btn btn-primary next-3-days">Next 3
+                                                        days
+                                                        Forcast</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 padding-5 weather-details">
+                                                <div class="row ">
+                                                    <div class="col-md-3 dayDate"> Tue, Dec 01</div>
+                                                    <div class="col-md-3 degCelcius"> 8 / 5
+                                                        <span><sup><span class="circle-border"></span></sup> C</span>
+                                                    </div>
+                                                    <div class="col-md-3 rainInfo">OverCast clouds</div>
+                                                    <div class="col-md-3 actionBtn"><i
+                                                            class="fas fa-sort-down icon-font-size"></i></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row width-100">
+                                    <div class="col-md-12 map-container" id="map-container-id">Map</div>
+                                    <div class="col-md-12 currency-container">
+                                        <div class="row ">
+                                            <table class="col-md-12 ">
+                                                <thead>
+                                                    <tr class="row">
+                                                        <th class="col-md-4">Currency</th>
+                                                        <th class="col-md-4">Price</th>
+                                                        <th class="col-md-4">%Change</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="row">
+                                                        <td class="col-md-4">EURUSD</td>
+                                                        <td class="col-md-4">1.14702</td>
+                                                        <td class="col-md-4">0.21%</td>
+                                                    </tr>
+                                                    <tr class="row">
+                                                        <td class="col-md-4">USDCHF</td>
+                                                        <td class="col-md-4">0.9866</td>
+                                                        <td class="col-md-4">-0.15%</td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row web-app-footer">
+            <div class="col-md-12">
+                <p>
+                    I am footer
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script id="weather-template" type="text/html">
+        <div class="row ">
+            <div class="col-md-3 dayDate"> <%= date %> </div>
+            <div class="col-md-3 degCelcius"> <%= temp.min %> / <%= temp.max %>
+                <span><sup><span class="circle-border"></span></sup> C</span>
+            </div>
+            <div class="col-md-3 rainInfo"><%= weather.description %></div>
+            <div class="col-md-3 actionBtn"><i class="fas fa-sort-down icon-font-size"></i></i>
+            </div>
+        </div>
+    </script>
+
+    <script src="bundle.js" async></script>
+</body>
+
+</html>

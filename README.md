@@ -10,6 +10,8 @@ This app will let the user to see the map and current weather from the api docs,
 ```
 git pull origin https://github.com/sathish-srinivas/weather-app/issues
 
+git checkout development
+
 npm install
 
 npm start

@@ -2,7 +2,10 @@ import _ from "underscore";
 import { Loader } from "@googlemaps/js-api-loader";
 import weatherData from '../models/weather.model.js';
 import weatherViewData from '../views/weather.view'
-const additionalOptions = {};
+let additionalOptions = {
+    zoom: 4,
+    center: { lat: 11.66, lng: 78.14 },
+};
 
 export default Backbone.View.extend({
     map: null,
@@ -68,7 +71,8 @@ export default Backbone.View.extend({
                         city: data.name,
                         state: data.state,
                         country: data.country,
-                    }
+                    };
+                    additionalOptions = { ...additionalOptions, ...{ center: { lat: data.lat, lng: data.lon }, } }
                 }
                 self.renderAllTheView(self);
             },
@@ -87,12 +91,10 @@ export default Backbone.View.extend({
         const loader = new Loader({
             apiKey: process.env.GOOGLE_API_KEY,
             version: "weekly",
-            ...additionalOptions,
         });
         loader.load().then(() => {
             self.map = new google.maps.Map(document.getElementById("map-container-id"), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8,
+                ...additionalOptions
             });
         });
     },

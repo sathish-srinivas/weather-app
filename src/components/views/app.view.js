@@ -144,5 +144,6 @@ export default Backbone.View.extend({
         $('#curr_date').text(timeFormat);
         $('#curr_location').text(`${self.currentLocation.city}, ${self.currentLocation.state}`);
         $('#curr_degree').text(data.temp.min);
+        $('#footer-year').text(dateObj.getFullYear())
     }
 });
